@@ -5,8 +5,6 @@ Version:	1.13
 Release:	3
 License:	GPL
 Group:		Applications/System
-Group(de):	Applikationen/System
-Group(pl):	Aplikacje/System
 Source0:	http://linux.voyager.hr/umsdos/files/%{name}-%{version}.tgz
 URL:		http://linux.voyager.hr/umsdos/progs.html
 ExclusiveArch:	%{ix86}
