@@ -12,7 +12,7 @@ URL:		http://linux.voyager.hr/umsdos/progs.html
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix	/
+%define		_exec_prefix	/
 
 %description
 umsdos_progs contains utilities for using UMSDOS filesystem, such as
