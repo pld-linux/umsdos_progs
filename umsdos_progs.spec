@@ -8,6 +8,7 @@ Group:		Applications/System
 Source0:	http://linux.voyager.hr/umsdos/files/%{name}-%{version}.tgz
 # Source0-md5:	46f41fd9dbc23204f95f59619d30eee7
 Patch0:		%{name}-mangle.patch
+Patch1:		%{name}-glibc.patch
 URL:		http://linux.voyager.hr/umsdos/progs.html
 # for tests
 BuildRequires:	libstdc++-devel
@@ -48,16 +49,19 @@ podczas nie u¿ywania Linuksa.
 
 %prep
 %setup -q -n %{name}
-%patch -p1
+%patch0 -p1
+%patch1 -p1
 
 sed -e '/^#define BE_UVFAT/d' include/ums_config.h > h.tmp
 mv -f h.tmp include/ums_config.h
 
 %build
-%{__make} CFLAGS="%{rpmcflags} -I../include -DBE_UVFAT=1"
+%{__make} \
+	CFLAGS="%{rpmcflags} -I../include -DBE_UVFAT=1"
 mv -f util/umssync uvfatsync
 rm -f util/*.o
-%{__make} CFLAGS="%{rpmcflags} -I../include -DBE_UVFAT=0"
+%{__make} \
+	CFLAGS="%{rpmcflags} -I../include -DBE_UVFAT=0"
 
 %install
 rm -rf $RPM_BUILD_ROOT
