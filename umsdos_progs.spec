@@ -9,6 +9,7 @@ Group(pl):	Aplikacje/System
 License:	GPL
 Source0:	http://linux.voyager.hr/umsdos/files/%{name}-%{version}.tgz
 URL:		http://linux.voyager.hr/umsdos/progs.html
+ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		prefix	/
