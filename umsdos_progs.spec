@@ -1,13 +1,12 @@
 Summary:	Utilities for the Linux UMSDOS filesystem
 Summary(pl):	Narzêdzia do linuksowego systemu plików UMSDOS
 Name:		umsdos_progs
-Version:	1.13
-Release:	3
+Version:	1.14
+Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://linux.voyager.hr/umsdos/files/%{name}-%{version}.tgz
 URL:		http://linux.voyager.hr/umsdos/progs.html
-ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_exec_prefix	/
@@ -45,6 +44,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README
 %attr(755,root,root) %{_sbindir}/*
 %{_mandir}/man*/*
