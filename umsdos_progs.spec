@@ -39,7 +39,7 @@ install util/umssync $RPM_BUILD_ROOT%{_sbindir}
 ln -sf umssync $RPM_BUILD_ROOT%{_sbindir}/udosctl
 ln -sf umssync $RPM_BUILD_ROOT%{_sbindir}/umssetup
 install util/umssync.8 $RPM_BUILD_ROOT%{_mandir}/man8
-				
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
