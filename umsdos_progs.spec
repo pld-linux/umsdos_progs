@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://linux.voyager.hr/umsdos/files/%{name}-%{version}.tgz
+# Source0-md5:	46f41fd9dbc23204f95f59619d30eee7
 Patch0:		%{name}-mangle.patch
 URL:		http://linux.voyager.hr/umsdos/progs.html
 # for tests
