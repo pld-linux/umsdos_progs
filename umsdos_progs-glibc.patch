@@ -1,0 +1,49 @@
+--- umsdos_progs/util/umsdosio.c.orig	2002-07-23 02:48:43.000000000 +0200
++++ umsdos_progs/util/umsdosio.c	2004-04-08 23:36:01.037074456 +0200
+@@ -266,9 +266,9 @@
+ 	fstat->st_ino  = data.stat.st_ino;
+ 	fstat->st_mode = data.stat.st_mode;
+ 	fstat->st_size = data.stat.st_size;
+-	fstat->st_atime = data.stat.st_atime;
+-	fstat->st_ctime = data.stat.st_ctime;
+-	fstat->st_mtime = data.stat.st_mtime;
++	fstat->st_atime = data.stat.k_st_atime;
++	fstat->st_ctime = data.stat.k_st_ctime;
++	fstat->st_mtime = data.stat.k_st_mtime;
+ 	return ret;
+ }
+ 
+--- umsdos_progs/include/umsdos_fs05.h.orig	2001-12-02 16:01:16.000000000 +0100
++++ umsdos_progs/include/umsdos_fs05.h	2004-04-08 23:35:47.776090432 +0200
+@@ -97,11 +97,11 @@
+ 		__kernel_off_t st_size;
+ 		unsigned long st_blksize;
+ 		unsigned long st_blocks;
+-		__kernel_time_t st_atime;
++		__kernel_time_t k_st_atime;
+ 		unsigned long __unused1;
+-		__kernel_time_t st_mtime;
++		__kernel_time_t k_st_mtime;
+ 		unsigned long __unused2;
+-		__kernel_time_t st_ctime;
++		__kernel_time_t k_st_ctime;
+ 		unsigned long __unused3;
+ 		unsigned long __unused4;
+ 		unsigned long __unused5;
+--- umsdos_progs/include/umsdos_fs04.h.orig	2001-12-02 13:25:17.000000000 +0100
++++ umsdos_progs/include/umsdos_fs04.h	2004-04-08 23:36:41.294954328 +0200
+@@ -93,11 +93,11 @@
+ 		__kernel_off_t st_size;
+ 		unsigned long st_blksize;
+ 		unsigned long st_blocks;
+-		__kernel_time_t st_atime;
++		__kernel_time_t k_st_atime;
+ 		unsigned long __unused1;
+-		__kernel_time_t st_mtime;
++		__kernel_time_t k_st_mtime;
+ 		unsigned long __unused2;
+-		__kernel_time_t st_ctime;
++		__kernel_time_t k_st_ctime;
+ 		unsigned long __unused3;
+ 		unsigned long __unused4;
+ 		unsigned long __unused5;
