@@ -1,17 +1,18 @@
 diff -Nur umsdos_progs.orig/util/Makefile umsdos_progs/util/Makefile
 --- umsdos_progs.orig/util/Makefile	Thu Jan 20 01:34:13 2000
 +++ umsdos_progs/util/Makefile	Sat Jul  6 00:23:45 2002
-@@ -47,11 +47,6 @@
+@@ -47,12 +47,6 @@
  .c.o:
  	$(GCC) $(CFLAGS) -c $< -o $@
  
 -# Using directly one module from the kernel!
 -mangle.o: /usr/src/linux/fs/umsdos/mangle.c
 -	@echo $<
--	@$(GCC) $(CFLAGS) -c $< -o $@
+-	@$(GCC) $(CFLAGS) -c $< -I/usr/src/linux/include -o $@
+-#	@$(GCC) $(CFLAGS) -c -D __KERNEL__ -I/usr/src/linux/include $< -o $@
 -
  clean:
- 	rm -f *.o *.old *~ *.bak umssync udump udosctl umssetup testver testver_min mkhead .depend tags
+ 	rm -f *.o *.old *~ *.bak umssync uvfatsync udump ssize udosctl uvfatctl umssetup uvfatsetup testver testver_min mkhead .depend tags
  
 diff -Nur umsdos_progs.orig/util/mangle.c umsdos_progs/util/mangle.c
 --- umsdos_progs.orig/util/mangle.c	Thu Jan  1 01:00:00 1970
