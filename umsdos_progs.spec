@@ -2,7 +2,7 @@ Summary:	Utilities for the Linux UMSDOS filesystem.
 Summary(pl):	Narz/edzia do linuksowego systemu plik/ow UMSDOS
 Name:		umsdos_progs
 Version:	1.13
-Release:	1
+Release:	2
 Group:		Applications/System
 Group(de):	Applikationen/System
 Group(pl):	Aplikacje/System
@@ -12,7 +12,8 @@ URL:		http://linux.voyager.hr/umsdos/progs.html
 ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		prefix	/
+%define		_prefix	/
+
 %description
 umsdos_progs contains utilities for using UMSDOS filesystem, such as
 umssync, udosctl and umssetup. umssync and other utilities are
@@ -37,7 +38,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/{%{_sbindir},%{_mandir}/man8}
 install util/umssync $RPM_BUILD_ROOT%{_sbindir}
 ln -sf %{_sbindir}/umssync $RPM_BUILD_ROOT%{_sbindir}/udosctl
-ln -sf /sbin/umssync $RPM_BUILD_ROOT%{_sbindir}/umssetup
+ln -sf %{_sbindir}/umssync $RPM_BUILD_ROOT%{_sbindir}/umssetup
 install util/umssync.8 $RPM_BUILD_ROOT%{_mandir}/man8
 				
 %clean
