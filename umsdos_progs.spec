@@ -15,6 +15,7 @@ BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_exec_prefix	/
+%define		_sbindir	/sbin
 
 %description
 umsdos_progs contains utilities for using UMSDOS filesystem, such as
