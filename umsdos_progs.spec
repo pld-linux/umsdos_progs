@@ -1,12 +1,12 @@
-Summary:	Utilities for the Linux UMSDOS filesystem.
-Summary(pl):	Narz/edzia do linuksowego systemu plik/ow UMSDOS
+Summary:	Utilities for the Linux UMSDOS filesystem
+Summary(pl):	Narzêdzia do linuksowego systemu plików UMSDOS
 Name:		umsdos_progs
 Version:	1.13
-Release:	2
+Release:	3
+License:	GPL
 Group:		Applications/System
 Group(de):	Applikationen/System
 Group(pl):	Aplikacje/System
-License:	GPL
 Source0:	http://linux.voyager.hr/umsdos/files/%{name}-%{version}.tgz
 URL:		http://linux.voyager.hr/umsdos/progs.html
 ExclusiveArch:	%{ix86}
@@ -19,10 +19,13 @@ umsdos_progs contains utilities for using UMSDOS filesystem, such as
 umssync, udosctl and umssetup. umssync and other utilities are
 required to promote directories to UNIX semantics, and to check/fix
 any out-of-sync files you may create when not using Linux.
-umsdos_progs contains utilities for using UMSDOS filesystem, such as
-umssync, udosctl and umssetup. umssync and other utilities are
-required to promote directories to UNIX semantics, and to check/fix
-any out-of-sync files you may create when not using Linux.
+
+%description -l pl
+Pakiet umsdos_progs zwiera narzêdzia do systemu plików UMSDOS, takie
+jak umssync, udosctl i umssetup. umssync i inne narzêdzia s± potrzebne
+do promocji katalogów do semantyki uniksowej orz sprawdzania lub
+poprawiania plików, które siê rozsynchoronizowa³y podczas nie u¿ywania
+Linuksa.
 
 %prep
 %setup -q -n %{name}
