@@ -24,21 +24,19 @@ umssync, udosctl and umssetup. umssync and other utilities are
 required to promote directories to UNIX semantics, and to check/fix
 any out-of-sync files you may create when not using Linux.
 
-%description -l pl
-
 %prep
 %setup -q -n %{name}
 
 %build
-%{__make} CFLAGS="$RPM_OPT_FLAGS -I../include"
+%{__make} CFLAGS="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O -g} -I../include"
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_sbindir},%{_mandir}/man8}
 
-install -d $RPM_BUILD_ROOT/{%{_sbindir},%{_mandir}/man8}
 install util/umssync $RPM_BUILD_ROOT%{_sbindir}
-ln -sf %{_sbindir}/umssync $RPM_BUILD_ROOT%{_sbindir}/udosctl
-ln -sf %{_sbindir}/umssync $RPM_BUILD_ROOT%{_sbindir}/umssetup
+ln -sf umssync $RPM_BUILD_ROOT%{_sbindir}/udosctl
+ln -sf umssync $RPM_BUILD_ROOT%{_sbindir}/umssetup
 install util/umssync.8 $RPM_BUILD_ROOT%{_mandir}/man8
 				
 %clean
