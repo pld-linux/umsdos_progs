@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://linux.voyager.hr/umsdos/files/%{name}-%{version}.tgz
+Patch0:		%{name}-mangle.patch
 URL:		http://linux.voyager.hr/umsdos/progs.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -26,6 +27,7 @@ Linuksa.
 
 %prep
 %setup -q -n %{name}
+%patch -p1
 
 %build
 %{__make} CFLAGS="%{rpmcflags} -I../include"
