@@ -28,7 +28,7 @@ any out-of-sync files you may create when not using Linux.
 %setup -q -n %{name}
 
 %build
-%{__make} CFLAGS="%{!?debug:$RPM_OPT_FLAGS}%{?debug:-O -g} -I../include"
+%{__make} CFLAGS="%{?debug:-O -g}%{!?debug:$RPM_OPT_FLAGS} -I../include"
 
 %install
 rm -rf $RPM_BUILD_ROOT
