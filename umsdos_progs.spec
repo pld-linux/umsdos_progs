@@ -1,5 +1,5 @@
 Summary:	Utilities for the Linux UMSDOS filesystem
-Summary(pl):	Narzêdzia do linuksowego systemu plików UMSDOS
+Summary(pl.UTF-8):   NarzÄ™dzia do linuksowego systemu plikÃ³w UMSDOS
 Name:		umsdos_progs
 Version:	1.32
 Release:	1
@@ -23,16 +23,16 @@ umssync, udosctl and umssetup. umssync and other utilities are
 required to promote directories to UNIX semantics, and to check/fix
 any out-of-sync files you may create when not using Linux.
 
-%description -l pl
-Pakiet umsdos_progs zwiera narzêdzia do systemu plików UMSDOS, takie
-jak umssync, udosctl i umssetup. umssync i inne narzêdzia s± potrzebne
-do promocji katalogów do semantyki uniksowej oraz sprawdzania lub
-poprawiania plików, które siê rozsynchronizowa³y podczas nie u¿ywania
+%description -l pl.UTF-8
+Pakiet umsdos_progs zwiera narzÄ™dzia do systemu plikÃ³w UMSDOS, takie
+jak umssync, udosctl i umssetup. umssync i inne narzÄ™dzia sÄ… potrzebne
+do promocji katalogÃ³w do semantyki uniksowej oraz sprawdzania lub
+poprawiania plikÃ³w, ktÃ³re siÄ™ rozsynchronizowaÅ‚y podczas nie uÅ¼ywania
 Linuksa.
 
 %package uvfat
 Summary:	Utilities for the UVFAT filesystem
-Summary(pl):	Narzêdzia do systemu plików UVFAT
+Summary(pl.UTF-8):   NarzÄ™dzia do systemu plikÃ³w UVFAT
 Group:		Applications/System
 
 %description uvfat
@@ -41,12 +41,12 @@ as uvfatsync, uvfatctl and uvfatsetup. uvfatsync and other utilities
 are required to promote directories to UNIX semantics, and to
 check/fix any out-of-sync files you may create when not using Linux.
 
-%description uvfat -l pl
-Pakiet umsdos_progs-uvfat zwiera narzêdzia do systemu plików UVFAT,
-takie jak uvfatsync, uvfatctl i uvfatsetup. uvfatsync i inne narzêdzia
-s± potrzebne do promocji katalogów do semantyki uniksowej oraz
-sprawdzania lub poprawiania plików, które siê rozsynchronizowa³y
-podczas nie u¿ywania Linuksa.
+%description uvfat -l pl.UTF-8
+Pakiet umsdos_progs-uvfat zwiera narzÄ™dzia do systemu plikÃ³w UVFAT,
+takie jak uvfatsync, uvfatctl i uvfatsetup. uvfatsync i inne narzÄ™dzia
+sÄ… potrzebne do promocji katalogÃ³w do semantyki uniksowej oraz
+sprawdzania lub poprawiania plikÃ³w, ktÃ³re siÄ™ rozsynchronizowaÅ‚y
+podczas nie uÅ¼ywania Linuksa.
 
 %prep
 %setup -q -n %{name}
