@@ -1,5 +1,5 @@
 Summary:	Utilities for the Linux UMSDOS filesystem
-Summary(pl.UTF-8):   Narzędzia do linuksowego systemu plików UMSDOS
+Summary(pl.UTF-8):	Narzędzia do linuksowego systemu plików UMSDOS
 Name:		umsdos_progs
 Version:	1.32
 Release:	1
@@ -32,7 +32,7 @@ Linuksa.
 
 %package uvfat
 Summary:	Utilities for the UVFAT filesystem
-Summary(pl.UTF-8):   Narzędzia do systemu plików UVFAT
+Summary(pl.UTF-8):	Narzędzia do systemu plików UVFAT
 Group:		Applications/System
 
 %description uvfat
