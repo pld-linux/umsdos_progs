@@ -50,8 +50,8 @@ podczas nie używania Linuksa.
 
 %prep
 %setup -q -n %{name}
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 
 sed -e '/^#define BE_UVFAT/d' include/ums_config.h > h.tmp
 mv -f h.tmp include/ums_config.h
